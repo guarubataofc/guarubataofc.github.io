@@ -1,0 +1,49 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background-color: #000;
+    padding: 25px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    color: var(--green-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-media a:hover {
+    color: var(--green-hover);
+    text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

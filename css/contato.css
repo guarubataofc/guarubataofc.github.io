@@ -1,0 +1,114 @@
+/* =====================================================
+   CONTATO – INFORMAÇÕES
+===================================================== */
+.contato-info {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.contato-info ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+.contato-info li {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+/* CONTATO – LINKS */
+.contato-info a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.contato-info a:hover {
+    color: var(--green-primary);
+}
+
+/* =====================================================
+   FORMULÁRIO DE CONTATO
+===================================================== */
+.formulario {
+    max-width: 600px;
+    margin: auto;
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input,
+.form-contato select,
+.form-contato textarea {
+    background: #0b0b0b;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 12px 15px;
+    color: var(--text-light);
+    font-size: 14px;
+    transition: var(--transition-fast);
+}
+
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+    color: #aaa;
+}
+
+.form-contato input:focus,
+.form-contato select:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border-color: var(--green-primary);
+    box-shadow: 0 0 0 2px rgba(10, 92, 58, 0.2);
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-contato button {
+    margin-top: 10px;
+    padding: 12px 26px;
+    background: var(--green-primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.form-contato button:hover {
+    background: var(--green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(10, 92, 58, 0.35);
+}
+
+.form-contato button:focus {
+    outline: 2px solid var(--green-primary);
+    outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .formulario {
+        padding: 20px;
+        margin: 0 20px;
+    }
+
+    .contato-info ul {
+        text-align: left;
+    }
+}

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Função para inicializar carousels principais (slides full-width com dots)
+    // Esta função configura autoplay, navegação por dots e setas
     function initMainCarousel(carousel) {
         const track = carousel.querySelector('.carousel-track');
         const slides = carousel.querySelectorAll('.carousel-slide');
@@ -11,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!track || !slides.length || !dotsWrap || !prevBtn || !nextBtn) return;
 
         let currentIndex = 0;
-        let interval;
+        let interval; // Armazena o ID do setInterval para autoplay
 
-        // Gera dots automaticamente
+        // Gera dots automaticamente baseado no número de slides
         dotsWrap.innerHTML = '';
         slides.forEach((_, i) => {
             const btn = document.createElement('button');
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dots = carousel.querySelectorAll('.dot');
 
+        // Função principal para navegar para um slide específico
+        // Trata índices fora dos limites (loop infinito)
         function goToSlide(index) {
             if (index < 0) index = slides.length - 1;
             if (index >= slides.length) index = 0;

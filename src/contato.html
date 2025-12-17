@@ -3,9 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Guarubatão FC - Patrocinadores</title>
+    <title>Guarubatão FC - Contato</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/patrocinadores.css">
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
@@ -16,7 +22,7 @@
 
             <a class="logo-link" href="index.html" aria-label="Ir para a página inicial do Guarubatão FC">
                 <div class="logo">
-                    <img src="../img/escudo/escudo06.png" alt="Escudo do Guarubatão Futebol Clube">
+                    <img src="../img/escudo/escudo06.png" alt="Escudo do Guarubatão Futebol Clube" loading="lazy" loading="lazy" loading="lazy">
                     <span>Guarubatão FC</span>
                 </div>
             </a>
@@ -47,7 +53,7 @@
             <div class="carousel-slide">
                 <div class="hero hero-alt">
                     <div class="hero-content">
-                        <!--<img src="../img/escudo/escudo03.png" alt="Guarubatão FC">-->
+                        <!--<img src="../img/escudo/escudo03.png" alt="Guarubatão FC" loading="lazy" loading="lazy" loading="lazy">-->
                         <h1>Guarubatão Futebol Clube</h1>
                         <p>Paixão pelo futebol. Compromisso com a justiça.</p>
                         <a href="clube.html" class="btn-primary">Veja mais</a>
@@ -106,28 +112,135 @@
         <div class="carousel-dots"></div>
 
         <!-- SETAS -->
-        <button class="carousel-arrow prev">&#10094;</button>
-        <button class="carousel-arrow next">&#10095;</button>
+        <button class="carousel-arrow prev" aria-label="Imagem anterior no carousel">&#10094;</button>
+        <button class="carousel-arrow next" aria-label="Pr�xima imagem no carousel">&#10095;</button>
 
     </section>
+
     <main class="page">
 
-        <!-- HEADER DA PÁGINA -->
+        <!-- HEADER -->
         <header class="page-header">
-            <h1>Patrocinadores</h1>
-            <p>
-                Nossos patrocinadores são parceiros fundamentais para nosso crescimento
-                e fortalecimento
-            </p>
+            <h1>Contato</h1>
+            <p>Fale com o Guarubatão Futebol Clube.</p>
         </header>
 
-        <!-- LOGOS EM DESTAQUE -->
-        <section class="patrocinadores-destaque">
+        <!-- INFORMAÇÕES DE CONTATO -->
+        <section class="contato-info">
+            <ul>
+                <li><strong>Email:</strong> contato@guarubataofc.com.br</li>
+                <li>
+                    <strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/guarubatao.oficial" target="_blank">
+                        @guarubatao.oficial
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+<hr class="divider">
 
-            <h2 class="section-subtitle">Marcas que caminham conosco</h2>
+        <!-- FORMULÁRIO -->
+        <section class="formulario" id="contato-formulario">
+            <div class="form-box">
 
-            <div class="patrocinadores-grid">
+                <h2>Seja Patrocinador</h2>
+                <p class="microcopy">
+                    Associe sua marca a um projeto esportivo sério, ético e em crescimento.
+                </p>
 
+                <form class="form-contato" aria-label="Formulário de contato para patrocinadores">
+
+    <input
+        type="text"
+        placeholder="Seu nome completo"
+        aria-label="Nome completo"
+        required
+    >
+
+    <input
+        type="email"
+        placeholder="Seu melhor e-mail"
+        aria-label="Endereço de e-mail"
+        required
+    >
+
+    <input
+        type="text"
+        placeholder="Telefone / WhatsApp"
+        aria-label="Telefone ou WhatsApp para contato"
+    >
+
+    <select
+        name="origem"
+        aria-label="Como nos encontrou"
+        required
+    >
+        <option value="" disabled selected>Como nos encontrou?</option>
+
+        <optgroup label="Redes Sociais">
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+            <option value="linkedin">LinkedIn</option>
+        </optgroup>
+
+        <optgroup label="Pesquisa">
+            <option value="google">Google</option>
+            <option value="indicacao">Indicação</option>
+        </optgroup>
+
+        <optgroup label="Outros">
+            <option value="evento">Evento esportivo</option>
+            <option value="outro">Outro</option>
+        </optgroup>
+    >
+
+    </select>
+
+    <select
+        name="retorno"
+        aria-label="Preferência de retorno do contato"
+        required
+    >
+        <option value="" disabled selected>Como prefere receber o retorno?</option>
+
+        <option value="email">E-mail</option>
+        <option value="whatsapp">WhatsApp</option>
+        <option value="instagram">Instagram</option>
+        <option value="telefone">Telefone</option>
+    </select>
+
+    <textarea
+        placeholder="Conte um pouco sobre sua empresa e como gostaria de apoiar o Guarubatão FC"
+        aria-label="Mensagem com informações sobre a empresa e proposta de patrocínio"
+        rows="4"
+    ></textarea>
+
+    <button
+        type="submit"
+        class="btn-primary"
+        aria-label="Enviar formulário de contato"
+    >
+        Enviar contato
+    </button>
+
+</form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <hr class="divider">
+
+    <!-- ================= Patrocinadores ================= -->
+    <section class="patrocinadores">
+        <h2 class="section-title">Patrocinadores</h2>
+
+        <div class="patrocinadores-carousel">
+            <!-- <button class="patrocinador-arrow prev">&#10094;</button> -->
+
+            <div class="patrocinadores-track">
                 <a href="https://www.instagram.com/armoa.advogados/" target="_blank" rel="noopener noreferrer"
                     aria-label="Armôa Sociedade Individual de Advocacia">
                     <img src="../img/patrocinadores/armoa_sociedade_individual_de_advocacia2.png"
@@ -136,33 +249,18 @@
 
                 <a href="https://solutionsfacilities.com.br/" target="_blank" rel="noopener noreferrer"
                     aria-label="Solutions Facilities">
-                    <img src="../img/patrocinadores/solutions_facilities2.png" alt="Solutions Facilities">
+                    <img src="../img/patrocinadores/solutions_facilities2.png" alt="Solutions Facilities" loading="lazy" loading="lazy" loading="lazy">
                 </a>
 
                 <a href="https://www.vegasleiloes.com.br/" target="_blank" rel="noopener noreferrer"
                     aria-label="Vegas Leilões">
-                    <img src="../img/patrocinadores/vegas-leiloes.png" alt="Vegas Leilões">
+                    <img src="../img/patrocinadores/vegas-leiloes.png" alt="Vegas Leilões" loading="lazy" loading="lazy" loading="lazy">
                 </a>
-
-            </div>
-        </section>
-
-        <!-- CTA DESTACADA -->
-        <section class="patrocinadores-cta">
-
-            <div class="cta-box">
-                <h2>Seja um Patrocinador</h2>
-                <p>
-                    Associe sua marca a um projeto esportivo sério,
-                    ético e em constante crescimento.
-                </p>
-                <a href="contato.html" class="btn-primary">Entre em contato</a>
             </div>
 
-        </section>
-
-    </main>
-
+            <!-- <button class="patrocinador-arrow next">&#10095;</button> -->
+        </div>
+    </section>
 
 
     <!-- ================= FOOTER ================= -->
@@ -182,3 +280,5 @@
     <script src="../js/patrocinadores-carousel.js"></script>
 
 </body>
+
+

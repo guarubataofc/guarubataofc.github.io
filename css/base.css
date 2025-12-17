@@ -1,0 +1,49 @@
+/* =====================================================
+   RESET E BASE
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   VARIÁVEIS DE COR (PADRÃO VISUAL)
+===================================================== */
+:root {
+    --green-primary: #0a5c3a; /* marca */
+    --green-hover: #0f7d4e; /* hover */
+    --green-dark: #073f28; /* gradientes escuros */
+    --green-soft: #0f2f20; /* gradientes suaves */
+
+    /* Espaçamentos */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    /* Fontes responsivas */
+    --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
+    --font-size-sm: clamp(0.875rem, 2.5vw, 1rem);
+    --font-size-md: clamp(1rem, 3vw, 1.125rem);
+    --font-size-lg: clamp(1.125rem, 4vw, 1.25rem);
+    --font-size-xl: clamp(1.25rem, 5vw, 1.5rem);
+    --font-size-2xl: clamp(1.5rem, 6vw, 2rem);
+    --font-size-3xl: clamp(2rem, 8vw, 2.5rem);
+
+    /* Cores de texto para melhor contraste */
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --text-gray: #666666;
+
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}

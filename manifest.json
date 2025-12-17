@@ -1,0 +1,21 @@
+{
+  "name": "Guarubatão Futebol Clube",
+  "short_name": "Guarubatão FC",
+  "description": "Site oficial do Guarubatão Futebol Clube - Paixão pelo futebol. Compromisso com a justiça.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#006400",
+  "icons": [
+    {
+      "src": "/img/escudo/escudo06.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/escudo/escudo06.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+/* =====================================================
+   PATROCINADORES
+===================================================== */
+
+.patrocinadores {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px 50px;
+}
+
+.patrocinadores-carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.patrocinadores-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: transform 0.5s ease;
+}
+
+.patrocinadores-track img {
+    width: 220px;
+    height: 120px;
+    object-fit: contain;
+    background: #111;
+    padding: 14px;
+    border-radius: 12px;
+    /* sutil */
+    opacity: 0.8;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.patrocinadores-track img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.patrocinadores-track a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patrocinadores-track a:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* =====================================================
+   PATROCINADORES – PÁGINA (DESTAQUE)
+===================================================== */
+
+.patrocinadores-destaque {
+    margin-bottom: 80px;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #000, #0f2f20);
+}
+
+.patrocinadores-destaque h2 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.patrocinadores-destaque p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: #fff;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* GRID DE LOGOS */
+.patrocinadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.patrocinadores-grid img {
+    width: 260px;
+    height: 140px;
+    object-fit: contain;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    opacity: 0.8;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.patrocinadores-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.patrocinadores-grid a:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.patrocinadores-grid a:focus-visible img {
+    outline: 2px solid #0a5c3a;
+    outline-offset: 4px;
+}
+
+/* =====================================================
+   PATROCINADORES – CTA
+===================================================== */
+
+.patrocinadores-cta {
+    background: linear-gradient(to right, #000, #0f2f20, #000);
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.patrocinadores-cta h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.patrocinadores-cta p {
+    font-size: 16px;
+    opacity: 0.9;
+    color: #fff;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.patrocinadores-cta .btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .patrocinadores-track {
+        gap: 20px;
+    }
+
+    .patrocinadores-track img {
+        width: 180px;
+        height: 100px;
+    }
+
+    .patrocinadores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .patrocinadores-grid img {
+        width: 200px;
+        height: 110px;
+    }
+}

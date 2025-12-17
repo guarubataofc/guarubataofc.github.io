@@ -3,9 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Guarubatão FC - Contato</title>
+    <title>Guarubatão FC - O Clube</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/patrocinadores.css">
+    <link rel="stylesheet" href="../css/clube.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
@@ -16,7 +22,7 @@
 
             <a class="logo-link" href="index.html" aria-label="Ir para a página inicial do Guarubatão FC">
                 <div class="logo">
-                    <img src="../img/escudo/escudo06.png" alt="Escudo do Guarubatão Futebol Clube">
+                    <img src="../img/escudo/escudo06.png" alt="Escudo do Guarubatão Futebol Clube" loading="lazy" loading="lazy" loading="lazy">
                     <span>Guarubatão FC</span>
                 </div>
             </a>
@@ -47,7 +53,7 @@
             <div class="carousel-slide">
                 <div class="hero hero-alt">
                     <div class="hero-content">
-                        <!--<img src="../img/escudo/escudo03.png" alt="Guarubatão FC">-->
+                        <!--<img src="../img/escudo/escudo03.png" alt="Guarubatão FC" loading="lazy" loading="lazy" loading="lazy">-->
                         <h1>Guarubatão Futebol Clube</h1>
                         <p>Paixão pelo futebol. Compromisso com a justiça.</p>
                         <a href="clube.html" class="btn-primary">Veja mais</a>
@@ -106,123 +112,44 @@
         <div class="carousel-dots"></div>
 
         <!-- SETAS -->
-        <button class="carousel-arrow prev">&#10094;</button>
-        <button class="carousel-arrow next">&#10095;</button>
+        <button class="carousel-arrow prev" aria-label="Imagem anterior no carousel">&#10094;</button>
+        <button class="carousel-arrow next" aria-label="Pr�xima imagem no carousel">&#10095;</button>
 
     </section>
 
+    <!-- ================= Quem Somos ================= -->
     <main class="page">
-
-        <!-- HEADER -->
         <header class="page-header">
-            <h1>Contato</h1>
-            <p>Fale com o Guarubatão Futebol Clube.</p>
+            <h1>Quem Somos</h1>
         </header>
+        <section class="page-section">
+            <section class="clube-section">
+                <p>
+                    Conheça a história, a essência e os valores do Guarubatão Futebol Clube
+                </p><br>
+                <p>
+                    O Guarubatão Futebol Clube é uma equipe amadora de futebol formada por advogados
+                    integrantes das subseções da OAB das cidades de Guarujá, Cubatão, Santos,
+                    Praia Grande, São Vicente e Ribeirão Pires.
+                </p><br>
 
-        <!-- INFORMAÇÕES DE CONTATO -->
-        <section class="contato-info">
-            <ul>
-                <li><strong>Email:</strong> contato@guarubataofc.com.br</li>
-                <li>
-                    <strong>Instagram:</strong>
-                    <a href="https://www.instagram.com/guarubatao.oficial" target="_blank">
-                        @guarubatao.oficial
-                    </a>
-                </li>
-            </ul>
-        </section>
-        
-<hr class="divider">
+                <p>
+                    Fundado em 2003, o Guarubatão nasceu com o objetivo de participar do Campeonato
+                    Paulista dos Advogados, organizado pela OAB/CAASP, reconhecido como o maior
+                    campeonato de classes do mundo.
+                </p><br>
 
-        <!-- FORMULÁRIO -->
-        <section class="formulario" id="contato-formulario">
-            <div class="form-box">
+                <p>
+                    Inicialmente formado pelas subseções da OAB/SP Cubatão e OAB/SP Guarujá,
+                    o time recebeu o apelido carinhoso de <strong>“Guarubatão”</strong>.
+                </p><br>
 
-                <h2>Seja Patrocinador</h2>
-                <p class="microcopy">
-                    Associe sua marca a um projeto esportivo sério, ético e em crescimento.
+                <p>
+                    Com o passar dos anos, novas subseções se uniram ao projeto esportivo,
+                    transformando o Guarubatão em uma das melhores equipes do país na modalidade.
                 </p>
-
-                <form class="form-contato" aria-label="Formulário de contato para patrocinadores">
-
-    <input
-        type="text"
-        placeholder="Seu nome completo"
-        aria-label="Nome completo"
-        required
-    >
-
-    <input
-        type="email"
-        placeholder="Seu melhor e-mail"
-        aria-label="Endereço de e-mail"
-        required
-    >
-
-    <input
-        type="text"
-        placeholder="Telefone / WhatsApp"
-        aria-label="Telefone ou WhatsApp para contato"
-    >
-
-    <select
-        name="origem"
-        aria-label="Como nos encontrou"
-        required
-    >
-        <option value="" disabled selected>Como nos encontrou?</option>
-
-        <optgroup label="Redes Sociais">
-            <option value="instagram">Instagram</option>
-            <option value="facebook">Facebook</option>
-            <option value="linkedin">LinkedIn</option>
-        </optgroup>
-
-        <optgroup label="Pesquisa">
-            <option value="google">Google</option>
-            <option value="indicacao">Indicação</option>
-        </optgroup>
-
-        <optgroup label="Outros">
-            <option value="evento">Evento esportivo</option>
-            <option value="outro">Outro</option>
-        </optgroup>
-    >
-
-    </select>
-
-    <select
-        name="retorno"
-        aria-label="Preferência de retorno do contato"
-        required
-    >
-        <option value="" disabled selected>Como prefere receber o retorno?</option>
-
-        <option value="email">E-mail</option>
-        <option value="whatsapp">WhatsApp</option>
-        <option value="instagram">Instagram</option>
-        <option value="telefone">Telefone</option>
-    </select>
-
-    <textarea
-        placeholder="Conte um pouco sobre sua empresa e como gostaria de apoiar o Guarubatão FC"
-        aria-label="Mensagem com informações sobre a empresa e proposta de patrocínio"
-        rows="4"
-    ></textarea>
-
-    <button
-        type="submit"
-        class="btn-primary"
-        aria-label="Enviar formulário de contato"
-    >
-        Enviar contato
-    </button>
-
-</form>
-
-            </div>
+            </section>
         </section>
-
     </main>
 
     <hr class="divider">
@@ -243,12 +170,12 @@
 
                 <a href="https://solutionsfacilities.com.br/" target="_blank" rel="noopener noreferrer"
                     aria-label="Solutions Facilities">
-                    <img src="../img/patrocinadores/solutions_facilities2.png" alt="Solutions Facilities">
+                    <img src="../img/patrocinadores/solutions_facilities2.png" alt="Solutions Facilities" loading="lazy" loading="lazy" loading="lazy">
                 </a>
 
                 <a href="https://www.vegasleiloes.com.br/" target="_blank" rel="noopener noreferrer"
                     aria-label="Vegas Leilões">
-                    <img src="../img/patrocinadores/vegas-leiloes.png" alt="Vegas Leilões">
+                    <img src="../img/patrocinadores/vegas-leiloes.png" alt="Vegas Leilões" loading="lazy" loading="lazy" loading="lazy">
                 </a>
             </div>
 
@@ -274,3 +201,5 @@
     <script src="../js/patrocinadores-carousel.js"></script>
 
 </body>
+
+

@@ -3,9 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Guarubatão FC - O Clube</title>
+    <title>Guarubatão FC - Patrocinadores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/patrocinadores.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
@@ -16,7 +21,7 @@
 
             <a class="logo-link" href="index.html" aria-label="Ir para a página inicial do Guarubatão FC">
                 <div class="logo">
-                    <img src="../img/escudo/escudo06.png" alt="Escudo do Guarubatão Futebol Clube">
+                    <img src="../img/escudo/escudo06.png" alt="Escudo do Guarubatão Futebol Clube" loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy">
                     <span>Guarubatão FC</span>
                 </div>
             </a>
@@ -47,7 +52,7 @@
             <div class="carousel-slide">
                 <div class="hero hero-alt">
                     <div class="hero-content">
-                        <!--<img src="../img/escudo/escudo03.png" alt="Guarubatão FC">-->
+                        <!--<img src="../img/escudo/escudo03.png" alt="Guarubatão FC" loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy">-->
                         <h1>Guarubatão Futebol Clube</h1>
                         <p>Paixão pelo futebol. Compromisso com a justiça.</p>
                         <a href="clube.html" class="btn-primary">Veja mais</a>
@@ -106,56 +111,28 @@
         <div class="carousel-dots"></div>
 
         <!-- SETAS -->
-        <button class="carousel-arrow prev">&#10094;</button>
-        <button class="carousel-arrow next">&#10095;</button>
+        <button class="carousel-arrow prev" aria-label="Imagem anterior no carousel">&#10094;</button>
+        <button class="carousel-arrow next" aria-label="Pr�xima imagem no carousel">&#10095;</button>
 
     </section>
-
-    <!-- ================= Quem Somos ================= -->
     <main class="page">
+
+        <!-- HEADER DA PÁGINA -->
         <header class="page-header">
-            <h1>Quem Somos</h1>
+            <h1>Patrocinadores</h1>
+            <p>
+                Nossos patrocinadores são parceiros fundamentais para nosso crescimento
+                e fortalecimento
+            </p>
         </header>
-        <section class="page-section">
-            <section class="clube-section">
-                <p>
-                    Conheça a história, a essência e os valores do Guarubatão Futebol Clube
-                </p><br>
-                <p>
-                    O Guarubatão Futebol Clube é uma equipe amadora de futebol formada por advogados
-                    integrantes das subseções da OAB das cidades de Guarujá, Cubatão, Santos,
-                    Praia Grande, São Vicente e Ribeirão Pires.
-                </p><br>
 
-                <p>
-                    Fundado em 2003, o Guarubatão nasceu com o objetivo de participar do Campeonato
-                    Paulista dos Advogados, organizado pela OAB/CAASP, reconhecido como o maior
-                    campeonato de classes do mundo.
-                </p><br>
+        <!-- LOGOS EM DESTAQUE -->
+        <section class="patrocinadores-destaque">
 
-                <p>
-                    Inicialmente formado pelas subseções da OAB/SP Cubatão e OAB/SP Guarujá,
-                    o time recebeu o apelido carinhoso de <strong>“Guarubatão”</strong>.
-                </p><br>
+            <h2 class="section-subtitle">Marcas que caminham conosco</h2>
 
-                <p>
-                    Com o passar dos anos, novas subseções se uniram ao projeto esportivo,
-                    transformando o Guarubatão em uma das melhores equipes do país na modalidade.
-                </p>
-            </section>
-        </section>
-    </main>
+            <div class="patrocinadores-grid">
 
-    <hr class="divider">
-
-    <!-- ================= Patrocinadores ================= -->
-    <section class="patrocinadores">
-        <h2 class="section-title">Patrocinadores</h2>
-
-        <div class="patrocinadores-carousel">
-            <!-- <button class="patrocinador-arrow prev">&#10094;</button> -->
-
-            <div class="patrocinadores-track">
                 <a href="https://www.instagram.com/armoa.advogados/" target="_blank" rel="noopener noreferrer"
                     aria-label="Armôa Sociedade Individual de Advocacia">
                     <img src="../img/patrocinadores/armoa_sociedade_individual_de_advocacia2.png"
@@ -164,18 +141,33 @@
 
                 <a href="https://solutionsfacilities.com.br/" target="_blank" rel="noopener noreferrer"
                     aria-label="Solutions Facilities">
-                    <img src="../img/patrocinadores/solutions_facilities2.png" alt="Solutions Facilities">
+                    <img src="../img/patrocinadores/solutions_facilities2.png" alt="Solutions Facilities" loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy">
                 </a>
 
                 <a href="https://www.vegasleiloes.com.br/" target="_blank" rel="noopener noreferrer"
                     aria-label="Vegas Leilões">
-                    <img src="../img/patrocinadores/vegas-leiloes.png" alt="Vegas Leilões">
+                    <img src="../img/patrocinadores/vegas-leiloes.png" alt="Vegas Leilões" loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy">
                 </a>
+
+            </div>
+        </section>
+
+        <!-- CTA DESTACADA -->
+        <section class="patrocinadores-cta">
+
+            <div class="cta-box">
+                <h2>Seja um Patrocinador</h2>
+                <p>
+                    Associe sua marca a um projeto esportivo sério,
+                    ético e em constante crescimento.
+                </p>
+                <a href="contato.html" class="btn-primary">Entre em contato</a>
             </div>
 
-            <!-- <button class="patrocinador-arrow next">&#10095;</button> -->
-        </div>
-    </section>
+        </section>
+
+    </main>
+
 
 
     <!-- ================= FOOTER ================= -->
@@ -195,3 +187,5 @@
     <script src="../js/patrocinadores-carousel.js"></script>
 
 </body>
+
+

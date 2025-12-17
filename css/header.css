@@ -1,0 +1,86 @@
+/* =====================================================
+   HEADER / MENU
+===================================================== */
+.header {
+    background: #000;
+    border-bottom: 3px solid var(--green-primary);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Navegação */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color var(--transition-normal);
+}
+
+.nav a:hover, .nav a:focus {
+    color: var(--green-primary);
+}
+
+/* Menu Hambúrguer */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.hamburger:hover, .hamburger:focus {
+    color: var(--green-primary);
+    transform: scale(1.1);
+}
+
+.hamburger.open::before {
+    content: '✕';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

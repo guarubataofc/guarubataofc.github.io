@@ -3,13 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navUl = document.querySelector('.nav ul');
 
+    console.log('Menu JS loaded. Hamburger:', hamburger, 'Nav UL:', navUl);
+
     if (hamburger && navUl) {
         const toggleMenu = () => {
+            console.log('Toggling menu');
             navUl.classList.toggle('open');
+            hamburger.classList.toggle('open'); // Adiciona classe para animação X
         };
 
-        hamburger.addEventListener('click', toggleMenu);
-        hamburger.addEventListener('touchstart', toggleMenu); // Para mobile
+        hamburger.addEventListener('click', (e) => {
+            e.preventDefault(); // Previne comportamento padrão
+            toggleMenu();
+        });
+
+        // Navegação por teclado
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
 
         // Fecha o menu ao clicar em um link
         navUl.addEventListener('click', (e) => {
@@ -24,5 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 navUl.classList.remove('open');
             }
         });
+
+        // Fecha o menu com Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navUl.classList.contains('open')) {
+                navUl.classList.remove('open');
+            }
+        });
+    } else {
+        console.error('Hamburger or Nav UL not found');
     }
 });
