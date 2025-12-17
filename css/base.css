@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* =====================================================
    VARIÁVEIS DE COR (PADRÃO VISUAL)
 ===================================================== */
@@ -41,6 +53,12 @@
     --text-light: #ffffff;
     --text-dark: #000000;
     --text-gray: #666666;
+
+    /* Cores de fundo */
+    --bg-dark: #000000;
+    --bg-darker: #0a0a0a;
+    --bg-soft-dark: #0f2f20;
+    --bg-accent: #0f0f0f;
 
     /* Transições */
     --transition-fast: 0.2s ease;
