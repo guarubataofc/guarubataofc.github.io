@@ -78,6 +78,43 @@
     color: var(--green-primary);
 }
 
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.hamburger:hover {
+    color: var(--green-primary);
+}
+
+.nav ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #000;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.nav ul.open li {
+    margin: 10px 0;
+}
+
+.nav ul.open a {
+    font-size: 16px;
+}
+
 /* ==============================
    MODAL DE ENTRADA – FULLSCREEN
 ============================== */
@@ -383,7 +420,7 @@
 .page {
     max-width: 1200px;
     margin: auto;
-    padding: 60px 20px 40px;
+    padding: 40px 10px;
     flex: 1;
 }
 
@@ -946,6 +983,12 @@ main {
     RESPONSIVO
 ===================================================== */
 @media (max-width: 768px) {
+    .nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
     .elenco-track .jogador-card {
         min-width: 240px;
     }
