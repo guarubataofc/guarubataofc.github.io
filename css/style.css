@@ -1,0 +1,979 @@
+/* =====================================================
+   RESET E BASE
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   VARIÁVEIS DE COR (PADRÃO VISUAL)
+===================================================== */
+:root {
+    --green-primary: #0a5c3a;
+    /* marca */
+    --green-hover: #0f7d4e;
+    /* hover */
+    --green-dark: #073f28;
+    /* gradientes escuros */
+    --green-soft: #0f2f20;
+    /* gradientes suaves */
+}
+
+
+/* =====================================================
+   HEADER / MENU
+===================================================== */
+.header {
+    background: #000;
+    border-bottom: 3px solid #0a5c3a;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onde-assistir,
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 105px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--green-primary);
+}
+
+/* ==============================
+   MODAL DE ENTRADA – FULLSCREEN
+============================== */
+
+.intro-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.55) 35%,
+            rgba(0, 0, 0, 0.15) 70%,
+            rgba(0, 0, 0, 0.05) 100%),
+        url("../img/escudo/escudo09.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 100%;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+
+.intro-modal.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* conteúdo */
+.intro-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    padding-bottom: 60px;
+    /* distância do “rodapé invisível” */
+    max-width: 90%;
+}
+
+/* título */
+.intro-content h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* subtítulo */
+.intro-content p {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+/* botão */
+.intro-content .btn-primary {
+    padding: 12px 28px;
+    font-size: 15px;
+}
+
+/* =====================================================
+   CAROUSEL PRINCIPAL (HERO)
+===================================================== */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px 70px;
+    background: linear-gradient(to bottom, #000, var(--green-soft), #000);
+}
+
+.hero-alt {
+    background: linear-gradient(to bottom, #000, var(--green-soft), #000);
+}
+
+.hero-content img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO PADRÃO */
+.btn-primary {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 22px;
+
+    background: var(--green-primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(10, 92, 58, 0.35);
+}
+
+
+/* =====================================================
+   DOTS DO CAROUSEL PRINCIPAL
+===================================================== */
+.carousel-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -25px;
+    padding-bottom: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #444;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: #0a5c3a;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: #0f7d4e;
+}
+
+/* =====================================================
+   SETAS DO CAROUSEL PRINCIPAL
+===================================================== */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.carousel-arrow:hover {
+    background: rgba(10, 92, 58, 0.8);
+}
+
+.carousel-arrow.prev {
+    left: 15px;
+}
+
+.carousel-arrow.next {
+    right: 15px;
+}
+
+/* =====================================================
+   TÍTULOS DE SEÇÃO
+===================================================== */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 60px 0 40px;
+}
+
+
+/* =====================================================
+   PATROCINADORES
+===================================================== */
+
+.patrocinadores {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px 50px;
+}
+
+.patrocinadores-carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.patrocinadores-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: transform 0.5s ease;
+}
+
+.patrocinadores-track img {
+    width: 220px;
+    height: 120px;
+    object-fit: contain;
+    background: #111;
+    padding: 14px;
+    border-radius: 12px;
+    /* sutil */
+    opacity: 0.8;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.patrocinadores-track img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.patrocinadores-track a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patrocinadores-track a:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* =====================================================
+    FOOTER
+===================================================== */
+.footer {
+    background-color: #000;
+    padding: 25px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    color: var(--green-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-media a:hover {
+    color: var(--green-hover);
+    text-decoration: underline;
+}
+
+/* =====================================================
+   PÁGINAS INTERNAS (BASE)
+===================================================== */
+.page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px 40px;
+    flex: 1;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 15px;
+    opacity: 0.85;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.page section {
+    margin-bottom: 40px;
+}
+
+/* =====================================================
+   CLUBE
+===================================================== */
+.clube-section {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.clube-section h2 {
+    margin: 40px 0 15px;
+    color: #0a5c3a;
+}
+
+.clube-section p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.clube-valores ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.clube-valores li {
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   FUTEBOL
+===================================================== */
+.futebol-lista {
+    max-width: 800px;
+    margin: auto;
+}
+
+.futebol-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.futebol-lista li {
+    background: #111;
+    border-left: 4px solid #0a5c3a;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.participacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.participacao-card {
+    background: #111;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid var(--green-primary);
+    transition: 0.3s;
+}
+
+.participacao-card:hover {
+    transform: translateY(-6px);
+    background: #151515;
+}
+
+.participacao-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.participacao-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.participacao-card p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.participacao-lista {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.participacao-lista li {
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.timeline {
+    margin-top: 40px;
+    border-left: 3px solid var(--green-primary);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -41px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: var(--green-primary);
+    border-radius: 50%;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: var(--green-primary);
+    font-size: 16px;
+}
+
+.timeline-item p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.hino {
+    text-align: center;
+}
+
+.hino-audio {
+    margin: 25px 0 35px;
+}
+
+.hino-audio audio {
+    width: 100%;
+    max-width: 420px;
+}
+
+.hino-letra {
+    font-size: 16px;
+    line-height: 1.9;
+    opacity: 0.95;
+}
+
+.hino-letra p {
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   TABELA DE JOGOS – CAROUSEL
+===================================================== */
+
+.tabela-carousel {
+    max-width: 1200px;
+    margin: 60px auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0 40px;
+    /* espaço para as setas */
+}
+
+.tabela-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+/* ============================
+   CARD DE JOGO – VISUAL LIMPO
+============================ */
+
+.jogo-card {
+    background: linear-gradient(to bottom, #0b0b0b, #111);
+    border-radius: 18px;
+    padding: 26px 24px 28px;
+    text-align: center;
+
+    border-top: 4px solid var(--green-primary);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.jogo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 44px rgba(10, 92, 58, 0.35);
+}
+
+/* ============================
+   TOPO – FASE + DATA
+============================ */
+
+.jogo-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+.jogo-topo .fase {
+    font-weight: 600;
+    color: #9adbbf;
+}
+
+.jogo-topo .hora {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* ============================
+   TIMES
+============================ */
+
+.jogo-times {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.jogo-times .time {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.jogo-times .versus {
+    font-size: 14px;
+    opacity: 0.5;
+    margin: 2px 0;
+}
+
+/* ============================
+   LOCAL / LINK
+============================ */
+
+.onde-assistir {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--green-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.onde-assistir:hover {
+    color: var(--green-hover);
+    text-decoration: underline;
+}
+
+
+
+/* =====================================================
+   NOTÍCIAS
+===================================================== */
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.noticia-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.noticia-card:hover {
+    background: #151515;
+    transform: translateY(-4px);
+}
+
+.noticia-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.noticia-card p {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   PATROCINADORES – PÁGINA (DESTAQUE)
+===================================================== */
+
+.patrocinadores-destaque {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* GRID DE LOGOS */
+.patrocinadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.patrocinadores-grid img {
+    width: 260px;
+    height: 140px;
+    object-fit: contain;
+    background: #111;
+    padding: 18px;
+    border-radius: 14px;
+    filter: grayscale(100%);
+    opacity: 0.85;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: 0.35s ease;
+}
+
+.patrocinadores-grid a:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.patrocinadores-grid a:focus-visible img {
+    outline: 2px solid #0a5c3a;
+    outline-offset: 4px;
+}
+
+/* =====================================================
+   CTA – SEJA UM PATROCINADOR
+===================================================== */
+
+.patrocinadores-cta {
+    background: linear-gradient(to right, #000, #0f2f20, #000);
+    padding: 70px 20px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.cta-box {
+    max-width: 600px;
+    margin: auto;
+}
+
+.patrocinadores-cta h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.patrocinadores-cta p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.patrocinadores-cta .btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   CONTATO – INFORMAÇÕES
+===================================================== */
+.contato-info {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contato-info ul {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+}
+
+.contato-info li {
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+/* CONTATO – LINKS */
+.contato-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.contato-info a:hover {
+    color: #0a5c3a;
+    /* verde do site */
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   FORMULÁRIO DE CONTATO
+===================================================== */
+.formulario {
+    margin-top: 80px;
+}
+
+.form-box {
+    max-width: 700px;
+    margin: auto;
+    background: #111;
+    padding: 40px 30px;
+    border-radius: 16px;
+    border-top: 4px solid #0a5c3a;
+}
+
+.form-box h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.microcopy {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input,
+.form-contato select,
+.form-contato textarea {
+    background: #0b0b0b;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 12px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+    color: #aaa;
+}
+
+.form-contato input:focus,
+.form-contato select:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border-color: #0a5c3a;
+    background: #0e0e0e;
+    box-shadow: 0 0 0 1px rgba(10, 92, 58, 0.6);
+}
+
+.form-contato button {
+    margin-top: 10px;
+    padding: 12px 26px;
+    font-size: 14px;
+}
+
+.form-contato button:hover {
+    background: #0f7d4e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(10, 92, 58, 0.35);
+}
+
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #0a5c3a, transparent);
+    margin: 40px auto 60px;
+    max-width: 300px;
+}
+
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* =====================================================
+   MENU ATIVO
+===================================================== */
+.nav a.active {
+    color: #0a5c3a;
+    border-bottom: 2px solid #0a5c3a;
+    padding-bottom: 4px;
+}
+
+
+/* =====================================================
+    RESPONSIVO
+===================================================== */
+@media (max-width: 768px) {
+    .elenco-track .jogador-card {
+        min-width: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .jogo-card {
+        flex: 0 0 calc((100% - 30px) / 2);
+        /* 2 jogos */
+    }
+}
+
+@media (max-width: 600px) {
+    .jogo-card {
+        flex: 0 0 100%;
+        /* 1 jogo */
+    }
+
+    .tabela-carousel {
+        padding: 0 20px;
+    }
+}
+
