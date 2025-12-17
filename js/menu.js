@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navUl = document.querySelector('.nav ul');
 
     if (hamburger && navUl) {
-        hamburger.addEventListener('click', () => {
+        const toggleMenu = () => {
             navUl.classList.toggle('open');
-        });
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('touchstart', toggleMenu); // Para mobile
 
         // Fecha o menu ao clicar em um link
         navUl.addEventListener('click', (e) => {
