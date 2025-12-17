@@ -1,3 +1,5 @@
+﻿@charset "UTF-8";
+
 /* =====================================================
    CLUBE
 ===================================================== */
@@ -35,7 +37,7 @@
 }
 
 .clube-valores li::before {
-    content: '✓';
+    content: 'âœ“';
     position: absolute;
     left: 0;
     color: var(--green-primary);

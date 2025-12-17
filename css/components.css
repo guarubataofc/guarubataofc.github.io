@@ -1,8 +1,10 @@
+﻿@charset "UTF-8";
+
 /* =====================================================
    COMPONENTES COMUNS
 ===================================================== */
 
-/* BOTÃO PADRÃO */
+/* BOTÃƒO PADRÃƒO */
 .btn-primary {
     display: inline-block;
     margin-top: 25px;
@@ -28,7 +30,7 @@
     outline-offset: 2px;
 }
 
-/* TÍTULOS DE SEÇÃO */
+/* TÃTULOS DE SEÃ‡ÃƒO */
 .section-title {
     text-align: center;
     font-size: clamp(1.5rem, 5vw, 2rem);
@@ -126,7 +128,7 @@
 }
 
 .list-item::before {
-    content: '▶';
+    content: 'â–¶';
     position: absolute;
     left: 0;
     color: var(--green-primary);
@@ -152,7 +154,7 @@
     margin-bottom: 15px;
 }
 
-/* FORMULÁRIOS */
+/* FORMULÃRIOS */
 .form-group {
     margin-bottom: 20px;
 }
@@ -184,7 +186,7 @@
     border-color: var(--green-primary);
 }
 
-/* UTILITÁRIOS */
+/* UTILITÃRIOS */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -225,7 +227,7 @@
 }
 
 /* =====================================================
-   MODAL DE ENTRADA – FULLSCREEN
+   MODAL DE ENTRADA â€“ FULLSCREEN
 ===================================================== */
 
 .intro-modal {
@@ -260,32 +262,32 @@
     pointer-events: auto;
 }
 
-/* conteúdo */
+/* conteÃºdo */
 .intro-content {
     position: relative;
     z-index: 2;
 
     text-align: center;
     padding-bottom: 60px;
-    /* distância do "rodapé invisível" */
+    /* distÃ¢ncia do "rodapÃ© invisÃ­vel" */
     max-width: 90%;
 }
 
-/* título */
+/* tÃ­tulo */
 .intro-content h1 {
     font-size: clamp(1.5rem, 8vw, 2.5rem);
     margin-bottom: 10px;
     font-weight: 700;
 }
 
-/* subtítulo */
+/* subtÃ­tulo */
 .intro-content p {
     font-size: clamp(0.9rem, 4vw, 1rem);
     opacity: 0.9;
     margin-bottom: 25px;
 }
 
-/* botão */
+/* botÃ£o */
 .intro-content .btn-primary {
     padding: 12px 28px;
     font-size: 15px;
@@ -295,12 +297,12 @@
 @media (max-width: 768px) {
     .intro-modal {
         align-items: center; /* Centraliza verticalmente em mobile */
-        background-position: center; /* Ajusta posição do background */
+        background-position: center; /* Ajusta posiÃ§Ã£o do background */
     }
 
     .intro-content {
         padding-bottom: 40px; /* Reduz padding inferior */
-        max-width: 95%; /* Aumenta largura máxima */
+        max-width: 95%; /* Aumenta largura mÃ¡xima */
     }
 
     .intro-content h1 {
@@ -313,7 +315,7 @@
     }
 
     .intro-content .btn-primary {
-        padding: 10px 24px; /* Reduz padding do botão */
-        font-size: 14px; /* Reduz fonte do botão */
+        padding: 10px 24px; /* Reduz padding do botÃ£o */
+        font-size: 14px; /* Reduz fonte do botÃ£o */
     }
 }

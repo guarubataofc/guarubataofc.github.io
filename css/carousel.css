@@ -1,3 +1,5 @@
+﻿@charset "UTF-8";
+
 /* =====================================================
    CAROUSEL PRINCIPAL (HERO)
 ===================================================== */
@@ -49,7 +51,7 @@
     margin-bottom: 15px;
 }
 
-/* Dots de navegação */
+/* Dots de navegaÃ§Ã£o */
 .carousel-dots {
     position: absolute;
     bottom: 20px;
@@ -78,7 +80,7 @@
     background: var(--green-hover);
 }
 
-/* Setas de navegação */
+/* Setas de navegaÃ§Ã£o */
 .carousel-arrow {
     position: absolute;
     top: 50%;

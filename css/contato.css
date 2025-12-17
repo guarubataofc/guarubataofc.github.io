@@ -1,5 +1,7 @@
+﻿@charset "UTF-8";
+
 /* =====================================================
-   CONTATO – INFORMAÇÕES
+   CONTATO â€“ INFORMAÃ‡Ã•ES
 ===================================================== */
 .contato-info {
     max-width: 600px;
@@ -19,7 +21,7 @@
     color: var(--text-light);
 }
 
-/* CONTATO – LINKS */
+/* CONTATO â€“ LINKS */
 .contato-info a {
     color: #ffffff;
     text-decoration: none;
@@ -31,7 +33,7 @@
 }
 
 /* =====================================================
-   FORMULÁRIO DE CONTATO
+   FORMULÃRIO DE CONTATO
 ===================================================== */
 .formulario {
     max-width: 600px;
