@@ -56,17 +56,23 @@
 .page-header {
     text-align: center;
     margin-bottom: 50px;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #000, rgba(10, 92, 58, 0.1), #000);
+    border-bottom: 2px solid rgba(10, 92, 58, 0.3);
 }
 
 .page-header h1 {
     font-size: clamp(1.8rem, 6vw, 2.5rem);
     margin-bottom: 10px;
-    color: var(--text-light);
+    color: var(--green-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .page-header p {
     font-size: clamp(0.9rem, 3vw, 1rem);
-    opacity: 0.85;
+    opacity: 0.9;
     max-width: 700px;
     margin: auto;
     line-height: 1.7;
@@ -74,17 +80,20 @@
 }
 
 .page section {
-    margin-bottom: 40px;
+    margin-bottom: 0;
     padding: 60px 20px;
-    border-top: 1px solid rgba(10, 92, 58, 0.15);
+    background: linear-gradient(to bottom, #000, #0a0a0a, #000);
+    border-bottom: 1px solid rgba(10, 92, 58, 0.2);
 }
 
 .page section:nth-child(even) {
-    background: linear-gradient(to bottom, #000, rgba(10, 92, 58, 0.05), #000);
+    background: linear-gradient(to bottom, #0f0f0f, #000, #0f0f0f);
+    border-left: 4px solid rgba(10, 92, 58, 0.3);
 }
 
 .page section:nth-child(odd) {
-    background: linear-gradient(to bottom, #0a0a0a, rgba(10, 92, 58, 0.03), #0a0a0a);
+    background: linear-gradient(to bottom, #000, #0a0a0a, #000);
+    border-left: 4px solid rgba(10, 92, 58, 0.15);
 }
 
 /* CARDS GERAIS */
